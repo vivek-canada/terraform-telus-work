@@ -22,22 +22,23 @@ terraform-aws-telus
 ├── outputs.tf
 ├── s3_backend.tf
 ├── modules/
-    ├── vpc/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   ├── outputs.tf
-    ├── security_groups/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   ├── outputs.tf
-    ├── autoscaling/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   ├── outputs.tf
-    ├── elb/
-        ├── main.tf
-        ├── variables.tf
-        ├── outputs.tf
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── security_groups/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── autoscaling/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── elb/
+│       ├── main.tf
+│       ├── variables.tf
+│       ├── outputs.tf
+
 
 **Project Flow:**
 1. S3 Bucket and DynamoDB Table: Used for storing the Terraform state file and state locking 
@@ -63,9 +64,9 @@ terraform-aws-telus
 
 
 **Modules:**
-S3 Backend: Defines the backend configuration for Terraform to use an S3 bucket for state storage and a DynamoDB table for state locking.
-VPC Module: Defines the VPC, subnets, route tables, and gateways.
-Security Groups Module: Defines security groups for the ALB and EC2 instances.
-Autoscaling Module: Defines the launch template and auto-scaling group, including scale-up and scale-down policies.
-ELB Module: Defines the ALB, target group, and listener.
-Outputs: outputs will be available: alb_dns_name: The DNS name of the Application Load Balancer
+1. S3 Backend: Defines the backend configuration for Terraform to use an S3 bucket for state storage and a DynamoDB table for state locking.
+2. VPC Module: Defines the VPC, subnets, route tables, and gateways.
+3. Security Groups Module: Defines security groups for the ALB and EC2 instances.
+4. Autoscaling Module: Defines the launch template and auto-scaling group, including scale-up and scale-down policies.
+5. ELB Module: Defines the ALB, target group, and listener.
+6. Outputs: outputs will be available: alb_dns_name: The DNS name of the Application Load Balancer
